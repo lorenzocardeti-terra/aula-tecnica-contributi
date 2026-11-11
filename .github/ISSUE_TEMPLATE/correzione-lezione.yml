@@ -1,0 +1,32 @@
+name: Correggi una lezione
+description: Segnala un errore o proponi una modifica circoscritta.
+title: "[Correzione] "
+body:
+  - type: markdown
+    attributes:
+      value: "Questa segnalazione e gli allegati sono pubblici. Non inserire dati personali o prove riservate. Non esegue modifiche automatiche al sito."
+  - type: input
+    id: url
+    attributes:
+      label: URL della lezione
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: Passaggio interessato e problema
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Correzione proposta, motivazione e fonte
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Conferma
+      options:
+        - label: I contenuti e gli allegati sono autorizzati alla diffusione e non contengono dati o prove riservati.
+          required: true

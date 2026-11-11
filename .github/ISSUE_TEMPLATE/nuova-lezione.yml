@@ -1,0 +1,104 @@
+name: Proponi una lezione
+description: Invia una proposta con un account gratuito, senza accedere al codice del sito.
+title: "[Lezione] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Tutto ciò che invii qui, compresi gli allegati, è pubblico.**
+        Non inserire verifiche riservate, dati di studenti o materiale non autorizzato.
+        Usa il template e il kit del repository. L'invio non pubblica la lezione:
+        Lorenzo prepara la preview dopo una prima revisione e decide il rilascio.
+  - type: input
+    id: author
+    attributes:
+      label: Nome autore da mostrare sul sito
+      description: Nome pubblico desiderato; non inserire email o dati di studenti.
+    validations:
+      required: true
+  - type: input
+    id: title
+    attributes:
+      label: Titolo della lezione
+    validations:
+      required: true
+  - type: dropdown
+    id: year
+    attributes:
+      label: Anno
+      options:
+        - "1"
+        - "2"
+        - "3"
+        - "4"
+        - "5"
+    validations:
+      required: true
+  - type: input
+    id: subject
+    attributes:
+      label: Materia
+    validations:
+      required: true
+  - type: dropdown
+    id: track
+    attributes:
+      label: Percorso
+      options:
+        - Teoria
+        - Pratica — CAD e messa in tavola
+    validations:
+      required: true
+  - type: input
+    id: topic
+    attributes:
+      label: Argomento o componente
+    validations:
+      required: true
+  - type: textarea
+    id: objectives
+    attributes:
+      label: Obiettivo e prerequisiti
+    validations:
+      required: true
+  - type: textarea
+    id: content
+    attributes:
+      label: Lezione proposta e allegati autorizzati
+      description: Incolla il template compilato o allega il file .md/.txt. Elenca i file e il loro uso. Se un formato non è accettato, incolla il testo.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Fonti, provenienza delle immagini e autorizzazione alla diffusione
+      description: Non allegare documenti confidenziali. Indica opera, pagina/sezione, URL dove disponibile; segnala ciò che non è stato consultato.
+    validations:
+      required: true
+  - type: textarea
+    id: doubts
+    attributes:
+      label: Controlli effettuati e punti da confermare
+      description: Indica quali risultati hai verificato. Scrivi esplicitamente eventuali dubbi.
+    validations:
+      required: true
+  - type: input
+    id: ai
+    attributes:
+      label: Eventuale uso dell'IA
+      description: Scrivi nessuno oppure strumento e tipo di supporto. Non è richiesto alcun abbonamento.
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Conferme del proponente
+      options:
+        - label: Ho riletto la proposta e indicato i controlli svolti e i dubbi aperti.
+          required: true
+        - label: Ho compreso che testo, nome utente e allegati sono pubblici anche prima dell'approvazione.
+          required: true
+        - label: Non invio dati di studenti, credenziali o verifiche riservate e i materiali sono autorizzati alla diffusione.
+          required: true
+        - label: Autorizzo Lorenzo a revisionare il contributo e a valutarne la pubblicazione su Aula Tecnica con il nome indicato.
+          required: true
