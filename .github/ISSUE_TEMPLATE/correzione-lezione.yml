@@ -1,6 +1,8 @@
 name: Correggi una lezione
 description: Segnala un errore o proponi una modifica circoscritta.
 title: "[Correzione] "
+assignees:
+  - lorenzocardeti-terra
 body:
   - type: markdown
     attributes:

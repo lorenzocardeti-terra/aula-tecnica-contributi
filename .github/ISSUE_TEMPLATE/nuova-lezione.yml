@@ -1,6 +1,8 @@
 name: Proponi una lezione
 description: Invia una proposta con un account gratuito, senza accedere al codice del sito.
 title: "[Lezione] "
+assignees:
+  - lorenzocardeti-terra
 body:
   - type: markdown
     attributes:
